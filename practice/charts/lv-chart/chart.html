@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>机票价格趋势图</title>
+    <!--[if lt IE 9]><script type="text/javascript" src="./excanvas.js"></script><![endif]-->
+    <link rel="stylesheet" href="http://pic.lvmama.com/min/index.php?f=/styles/v6/header_new.css">
+    <style>
+    .chart-box {
+        position: relative;
+        width: 800px;
+        height: 300px;
+        margin: 40px auto;
+    }
+
+    #chart {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .chart-hover {
+        display: none;
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding-top: 3px;
+        height: 47px;
+        width: 100px;
+        margin: -25px 0 0 -50px;
+        border: 1px solid #eee;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    .chart-price {
+        color: #f60;
+        font-size: 14px;
+        margin-right: 3px;
+    }
+    .chart-discount {
+        color: #f60;
+    }
+    .chart-date {
+        color: #666;
+    }
+
+    .bottom-date {
+        position: absolute;
+        top: 205px;
+        color: #999;
+        white-space: nowrap;
+    }
+
+    .extremum-data {
+        position: absolute;
+        color: #f80;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="everything">
+        <div class="chart-box">
+            <canvas id="chart" width="800" height="200"></canvas>
+            <div class="chart-hover">
+                <span class="chart-price"></span><span class="chart-discount"></span><br><span class="chart-date"></span>
+            </div>
+        </div>
+    </div>
+    <script src="http://pic.lvmama.com/min/index.php?f=/js/new_v/jquery-1.7.2.min.js"></script>
+    <script src="./chart.js"></script>
+    <script>
+    $(window).on("load", function() {
+
+        var testData = [{
+            "date": "2017-07-01",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-02",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-03",
+            "price": 427,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-04",
+            "price": 426,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-05",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-06",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-07",
+            "price": 497,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-08",
+            "price": 497,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-09",
+            "price": 426,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-10",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-11",
+            "price": 426,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-12",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-13",
+            "price": 530,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-14",
+            "price": 550,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-15",
+            "price": 499,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-16",
+            "price": 499,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-17",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-18",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-19",
+            "price": 500,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-20",
+            "price": 618,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-21",
+            "price": 612,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-22",
+            "price": 730,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-23",
+            "price": 928,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-24",
+            "price": 790,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-25",
+            "price": 530,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-26",
+            "price": 430,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-27",
+            "price": 370,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-28",
+            "price": 429,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-29",
+            "price": 430,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-30",
+            "price": 480,
+            "discount": "3.5折"
+        }, {
+            "date": "2017-07-31",
+            "price": 480,
+            "discount": "3.5折"
+        }];
+
+        var chart= new priceChart({
+            chartId: "chart",
+            chartBoxSelector: ".chart-box",
+            chartHoverSelector: ".chart-hover",
+            chartPriceSelector: ".chart-price",
+            chartDateSelector: ".chart-date",
+            chartDiscountSelector: ".chart-discount",
+            bottomDateClass: "bottom-date",
+            extremumDataClass: "extremum-data",
+            data: testData
+        });
+
+    })
+    </script>
+</body>
+
+</html>

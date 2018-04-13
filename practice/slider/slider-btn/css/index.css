@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*
+author: 印韩春
+Date: 2015-07-03
+*/
+/* CSS RESET */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, select, textarea, p, blockquote, th, td, hr, button, figure, menu { margin: 0; padding: 0; }
+body { font: 12px/22px Tahoma, Arial, \5b8b\4f53, sans-serif; }
+body { min-width: 1096px;}
+
+/*wrap*/
+.wrap {overflow: hidden; zoom: 1; }
+
+.slider {
+	position: relative;
+	left: 50%;
+	top: 0;
+	width: 1920px;
+	height: 400px; margin-left: -960px; overflow: hidden;
+}
+
+.slider-img-box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.slider-img-box li {
+	float: left;
+	width: 1920px;
+	height: 400px;
+	overflow: hidden;
+	zoom:1;
+}
+
+.slider-btn {
+	position: absolute;
+	width: 34px;
+	height: 140px;
+	top: 130px;
+	cursor: pointer;
+}
+
+.slider-prev-btn {
+	left: 0;
+	background: url(../images/prev.png);
+}
+
+.slider-next-btn {
+	right: 0;
+	background: url(../images/next.png);
+}
+
+

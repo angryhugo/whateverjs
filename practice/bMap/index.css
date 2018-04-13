@@ -1,0 +1,76 @@
+body {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#container {
+    height: 600px;
+    margin-top: 20px;
+}
+
+.markIcon {
+    position: absolute;
+    left: -8px;
+    height: 32px;
+    width: 26px;
+    display: inline-block;
+    background: url(./marker.png) no-repeat;
+    line-height: 32px;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    z-index: 10
+}
+
+.active .markIcon {
+    background: url(marker-active.png) no-repeat;
+}
+
+.infoWidow {
+    padding: 0 6px 0 15px;
+    max-width: 120px;
+    *width: 60px;
+    height: 30px;
+    color: #333;
+    line-height: 30px;
+    background: #fff;
+    border: 1px solid #CCC;
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    display: none;
+    z-index: 9;
+    font-size: 14px;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+
+#link-box {
+	overflow: hidden;
+}
+
+#link-box a {
+	float: left;
+	display: block;
+	width: 54px;
+    height: 26px;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    background: #f80;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+#link-box a:hover {
+	text-decoration: none;
+	background: #f60;
+}

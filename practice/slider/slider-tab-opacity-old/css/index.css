@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*
+author: 印韩春
+Date: 2015-07-03
+*/
+/* CSS RESET */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, select, textarea, p, blockquote, th, td, hr, button, figure, menu { margin: 0; padding: 0; }
+body { font: 12px/22px Tahoma, Arial, \5b8b\4f53, sans-serif; }
+body { min-width: 1096px;}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul { list-style: none; }
+a img { border: none; vertical-align: top; }
+input, button { font-family: Tahoma, Verdana, Geneva, sans-serif }
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+i { font-style: normal; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/*wrap*/
+.wrap {overflow: hidden; zoom: 1; }
+
+.slider {
+    position: relative;
+    width: 800px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-img-box {
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    width: 800px;
+    height: 480px;
+}
+
+.slider-img-box li {
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 800px;
+	height: 480px;
+    opacity: 0;
+    z-index: 0;
+	overflow: hidden;
+	zoom:1;
+}
+
+.slider-img-box li:first-child {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider-tab-box {
+    width: 100px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 16px;
+    font-size: 0;
+    overflow: hidden;
+    zoom: 1;
+    z-index: 2;
+}
+
+/*.slider-tab-box li {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 10px;
+    height: 9px;
+    padding: 4px;
+    background: url(../images/fib_icon.png) no-repeat;
+    cursor: pointer;
+    margin: 0 5px;
+    text-indent: -9999px;
+}
+
+.slider-tab-box li.on {
+    background: url(../images/fib_on_icon.png) no-repeat;
+}*/
+
+.slider-tab-box li {
+    float: left;
+    display: block;
+    position: relative;
+    *display: inline;/*ie67*/
+    zoom: 1;
+    overflow: hidden;
+    width: 8px;
+    height: 8px;
+    margin: 0 8px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    line-height: 99em;
+    background-color: rgba(0, 0, 0, .2);
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#33000000', endColorstr='#33000000');
+    background-image: url(###)9;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease
+}
+
+.slider-tab-box li.on {
+    filter: none;
+    background-color: #FFF
+}
+
+.slider-tab-box li::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     height: 0;
+     width: 100%;
+     background-color: #fff;
+     box-shadow: 0 0 1px #fff;
+     -webkit-transition: height .5s ease;
+     -moz-transition: height .5s ease;
+     -ms-transition: height .5s ease;
+     -o-transition: height .5s ease;
+     transition: height .5s ease
+ }
+ 
+.slider-tab-box li.on::after {
+     height: 100%
+}

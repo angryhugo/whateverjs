@@ -1,0 +1,204 @@
+@charset "utf-8";
+/*
+author: 印韩春
+Date: 2015-08-05
+*/
+/* CSS RESET */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, select, textarea, p, blockquote, th, td, hr, button, figure, menu { margin: 0; padding: 0; }
+body { font: 12px/22px Tahoma, Arial, \5b8b\4f53, sans-serif; }
+body { min-width: 1096px;}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul { list-style: none; }
+a img { border: none; vertical-align: top; }
+input, button { font-family: Tahoma, Verdana, Geneva, sans-serif }
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+i { font-style: normal; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+/*OTHER*/
+.main_b { width: 100%; background: #FFF; padding: 20px 0; margin-bottom: -20px; }
+.hd_title { position: relative; width: 991px; margin: 0 auto; height: 30px; line-height: 30px; font-size: 18px; }
+.hd_title p { height: 15px; border-bottom: #CCC solid 1px; }
+.hd_title h3 { font-family: "Microsoft YaHei"; position: absolute; left: 50%; margin-left: -105px; width: 210px; top: 0; line-height: 30px; text-align: center; background: #FFF; }
+.hd_list { width: 981px; padding: 10px 0 0 10px; margin: 0 auto; overflow: hidden; zoom: 1;  *padding: 10px 0 20px 10px;
+}
+.hd_list li { float: left; margin: 9px; display: inline; }
+.hd_list li img { display: block; }
+.ztfooter { width: 980px; overflow: hidden; margin: 0 auto; text-align: center; color: #666; line-height: 18px; padding: 25px 0 10px 0; }
+/*wrap*/
+.bg-2 {
+  background: url(../images/bg_02.jpg) center 0 no-repeat;
+  height: 290px;
+}
+.bg-3 {
+  background: url(../images/bg_03.jpg) center 0 no-repeat;
+  height: 350px;
+}
+.bg-4 {
+  background: url(../images/bg_04.jpg) center 0 no-repeat;
+  height: 590px;
+}
+.bg-5 {
+  background: url(../images/bg_05.jpg) center 0 no-repeat;
+  height: 700px;
+}
+.bg-6 {
+  background: url(../images/bg_06.jpg) center 0 no-repeat;
+  height: 600px;
+}
+.bg-7 {
+  background: url(../images/bg_07.jpg) center 0 no-repeat;
+  height: 560px;
+}
+.bg-8 {
+  background: url(../images/bg_08.jpg) center 0 no-repeat;
+  height: 800px;
+}
+.bg-9 {
+  background: url(../images/bg_09.jpg) center 0 no-repeat;
+  height: 540px;
+}
+.bg-10 {
+  background: url(../images/bg_10.jpg) center 0 no-repeat;
+  height: 600px;
+}
+.bg-11 {
+  background: url(../images/bg_11.jpg) center 0 no-repeat;
+  height: 540px;
+}
+.bg-12 {
+  background: url(../images/bg_12.jpg) center 0 no-repeat;
+  height: 1080px;
+}
+.bg-13 {
+  background: url(../images/bg_13.jpg) center 0 no-repeat;
+  height: 315px;
+}
+.bg-14 {
+  background: url(../images/bg_14.jpg) center 0 no-repeat;
+  height: 615px;
+}
+.bg-15 {
+  background: url(../images/bg_15.jpg) center 0 no-repeat;
+  height: 390px;
+}
+.bg-16 {
+  background: url(../images/bg_16.jpg) center 0 no-repeat;
+  height: 1400px;
+}
+.bg-17 {
+  background: url(../images/bg_17.jpg) center 0 no-repeat;
+  height: 532px;
+}
+.center-part {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.p-img, .p-btn {
+  display: block;
+  position: absolute;
+}
+
+.p-img-1, .p-img-2 {
+  width: 605px;
+  height: 65px;
+  left: 5px;
+}
+
+.p-img-1 {
+  top: 417px;
+}
+
+.p-img-2 {
+  top: 490px;
+}
+
+.p-img-3, .p-img-4 {
+  width: 364px;
+  height: 273px;
+  left: 625px;
+}
+
+.p-img-3 {
+  top: 5px;
+}
+
+.p-img-4 {
+  top: 286px;
+}
+
+.p-btn-club {
+  width: 212px;
+  height: 38px;
+  bottom: 37px;
+  left: 772px;
+}
+
+.side-nav {
+  background: url(../images/side_nav.png);
+  width: 48px; 
+  height: 414px; 
+  position: fixed; 
+  top:50%; 
+  margin-top: -220px; 
+  right: 0;
+  padding-top: 26px;
+}
+
+.side-nav a {
+  text-indent: -9999px;
+  display: block;
+  width: 48px;
+  height: 46px;
+}
+
+/*.side-nav a:hover {
+  background: url(../images/side_nav_hover.png);
+}*/
+
+.side-nav a.active {
+  background: url(../images/side_nav_hover.png);
+}
+
+.side-nav a.mao-zhu.active {
+  background-position: 0 -26px;
+}
+
+.side-nav a.mao-you.active {
+  background-position: 0 -72px;
+}
+
+.side-nav a.mao-hd.active {
+  background-position: 0 -118px;
+}
+
+.side-nav a.mao-xing.active {
+  background-position: 0 -164px;
+}
+
+.side-nav a.mao-shi.active {
+  background-position: 0 -210px;
+}
+
+.side-nav a.mao-li.active {
+  background-position: 0 -256px;
+}
+
+.side-nav a.mao-xz.active {
+  background-position: 0 -302px;
+}
+
+.side-nav a.mao-mai.active {
+  background-position: 0 -348px;
+}
+
+.side-nav a.mao-top.active {
+  background-position: 0 -394px;
+}
+
+/*ie*/
+* html .side-nav {  _position: absolute;  _top: expression(eval(document.documentElement.clientHeight/2 + document.documentElement.scrollTop)); }

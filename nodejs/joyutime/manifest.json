@@ -1,0 +1,27 @@
+{
+	"name":"景域工时查询系统",
+	//"update_url":"http://www.baoqianduan.com/demo/joyutime.crx",
+	"version": "1",
+	"manifest_version":2,
+	"description": "景域工时查询系统，进入EKP首页，会自动在浏览器右上角显示工时明细。　　　　　　　　　　　作者：杨安云，联系QQ：237364436",
+	"homepage_url":"http://www.lvmama.com/zt/qianduan/joyutime/",
+	"browser_action": {  
+		"default_icon": "icon.png" ,
+		"default_popup": "popup.html" 
+	},
+	"icons":{"16":"icon.png","128":"icon.png","48":"icon.png","72":"icon.png"},
+	//"background_page": "background.html",//定义HTML名称,可以自己更改
+	"background": {
+		"page":"background.html"
+	},
+	"permissions": ["http://*.baoqianduan.com/","http://*/","tabs","http://www.baoqianduan.com/demo/joyutimephp/joyutime.php"],
+	"content_scripts": [{
+		"matches": ["http://ekp.joyu.com/sys/portal/page.jsp*"],
+		"js": ["jquery1.7.js","joyutime.js"]
+    },
+	{
+		"matches": ["http://ekp.joyu.com/km/review/km_review_main/kmReviewMain.do?method=add&fdTemplateId=15016fdd0eeee65c34a33894bde9378b&fdTemplateName=%E8%AF%B7%E5%81%87%E5%AE%A1%E6%89%B9%E6%B5%81%E7%A8%8B&fdWorkId=&fdPhaseId=&fdModelId=&fdModelName=*"],
+		"js": ["jquery1.7.js","qingjia.js"]
+    }
+	]
+}

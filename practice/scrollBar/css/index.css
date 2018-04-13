@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS RESET */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+figure,
+menu {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/22px Tahoma, Arial, '\5b8b\4f53', sans-serif;
+}
+body {
+  min-width: 1096px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+a img {
+  border: none;
+  vertical-align: top;
+}
+input,
+button {
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*OTHER*/
+.main_b {
+  width: 100%;
+  background: #FFF;
+  padding: 20px 0;
+  margin-bottom: -20px;
+}
+.hd_title {
+  position: relative;
+  width: 991px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+.hd_title p {
+  height: 15px;
+  border-bottom: #CCC solid 1px;
+}
+.hd_title h3 {
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  left: 50%;
+  margin-left: -105px;
+  width: 210px;
+  top: 0;
+  line-height: 30px;
+  text-align: center;
+  background: #FFF;
+}
+.hd_list {
+  width: 981px;
+  padding: 10px 0 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+  zoom: 1;
+  *padding: 10px 0 20px 10px;
+}
+.hd_list li {
+  float: left;
+  margin: 9px;
+  display: inline;
+}
+.hd_list li img {
+  display: block;
+}
+.ztfooter {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  color: #666;
+  line-height: 18px;
+  padding: 25px 0 10px 0;
+}
+.main {
+  width: 300px;
+  margin: 0 auto;
+}
+.box {
+  font-size: 12px;
+  position: relative;
+  top: 0;
+  height: 500px;
+  width: 280px;
+  overflow: hidden;
+}
+.box .content {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 240px;
+}
+.box .content li {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  line-height: 20px;
+  padding: 7px 0;
+  color: #666666;
+}
+.box .scroll-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 50px;
+  background-color: #999;
+  border-radius: 3px;
+}
+.user,
+.date {
+  display: block;
+  color: #999;
+}
+.text {
+  width: 240px;
+}
+.cant-select {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function abc(result) {
+        alert(result.trans_result[0].src + "翻译的结果为\"" + result.trans_result[0].dst + "\"");
+    }
+    </script>
+    <script src="http://api.fanyi.baidu.com/api/trans/vip/translate?appid=2015063000000001&salt=1435660288&sign=f89f9594663708c1605f3d736d01d2d4&from=en&to=zh&q=apple&callback=abc"></script>
+</body>
+
+</html>

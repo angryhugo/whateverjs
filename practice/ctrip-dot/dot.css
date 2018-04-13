@@ -1,0 +1,70 @@
+.dot-group {
+     width: 120px;
+     margin: 0 auto;
+     background: #5EA2D3;
+ }
+ 
+ .dot-group .dot {
+     overflow: hidden;
+     position: relative;
+     display: inline-block;
+     width: 8px;
+     height: 8px;
+     margin: 0 4px;
+     border: 2px solid #fff;
+     border-radius: 6px;
+     line-height: 99em;
+     background-color: rgba(0, 0, 0, .2);
+     filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#33000000', endColorstr='#33000000');
+     background-image: url(###)9;
+     -webkit-transition: background .3s ease;
+     transition: background .3s ease
+ }
+ 
+ :root .dot-group .dot {
+     filter: none;
+     background-color: rgba(0, 0, 0, .2)
+ }
+ 
+ .dot-group .dot:hover {
+     background-color: rgba(0, 0, 0, .5);
+     filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#7F000000', endColorstr='#7F000000')
+ }
+ 
+ :root .dot-group .dot:hover {
+     filter: none;
+     background-color: rgba(0, 0, 0, .5)
+ }
+ 
+ .dot-group .dot.dot-current,
+ .dot-group .dot.dot-current:hover {
+     filter: none;
+     background-color: #FFF;
+     cursor: default
+ }
+ 
+ :root .dot-group .dot.dot-current,
+ :root .dot-group .dot.dot-current:hover {
+     filter: none;
+     background-color: #FFF
+ }
+ 
+ .dot-group .dot::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     height: 0;
+     left: 0;
+     width: 100%;
+     background-color: #fff;
+     box-shadow: 0 0 1px #fff;
+     -webkit-transition: height .5s ease;
+     -moz-transition: height .5s ease;
+     -ms-transition: height .5s ease;
+     -o-transition: height .5s ease;
+     transition: height .5s ease
+ }
+ 
+ .dot-group .dot.dot-current::after {
+     height: 100%
+ }

@@ -1,0 +1,32 @@
+@charset "utf-8";
+.contrast {
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #001323;
+  opacity: 0.8;
+}
+.contrast ul {
+  width: 1200px;
+  margin: 0 auto;
+}
+.contrast ul li {
+  float: left;
+  height: 100px;
+  width: 399px;
+  border-right: 1px solid #515e69;
+}
+.contrast ul li:last-child {
+  border-right: none;
+}
+.vs {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: url(vs.png);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}

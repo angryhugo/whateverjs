@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>img loading</title>
+	<style type="text/css">
+		.hide { display: none;}
+		.tab {
+			display: inline-block;
+			padding: 5px;
+			color: #565B5E;
+		}
+		a {
+			text-decoration: none;
+		}
+		.active {
+			color: #f60;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="img-div">
+			<img to="http://s1.lvjs.com.cn/uploads/pc/place2/84149/1422528502142.jpg" alt="厦门" width="235" height="157">
+		</div>
+		<div class="img-div hide">
+			<img to="http://s2.lvjs.com.cn/uploads/pc/place2/84143/1422588767691.jpg" alt="香港" width="235" height="157">
+		</div>
+	</div>
+	<div>
+		<a class="tab active" href="javascript:;">厦门</a>
+		<a class="tab" href="javascript:;">香港</a>
+	</div>
+</body>
+<script src="./jquery-1.9.0.js" type="text/javascript"></script>
+<script src="./imgLoading2.js" type="text/javascript"></script>
+</html>

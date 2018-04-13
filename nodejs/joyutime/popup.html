@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>景域EKP工具箱</title>
+<style>
+*{ margin:0; padding:0;}
+li{ list-style:none;}
+body { min-width: 160px;  overflow-x: hidden; padding-bottom:10px;} 
+.fr{ float:right;}
+body .c_f60{ color:#f60;}
+body .c_333{ color:#333;}
+
+.nav{ padding:0 10px 10px; margin-top:5px; text-align:center; overflow:hidden; position:relative; color:#555;}
+.nav dt{ text-align:left; font-size:12px; padding:8px 0;}
+.nav dd{ padding:8px 0; cursor:pointer; font-size:12px; border-top:#ddd dashed 1px; margin-top:-1px; line-height:16px; -webkit-transition:all 0.3s linear 0s;}
+.nav dd:hover{ background:#f1f1f1; color:#f60;}
+.footer{ padding:0 10px; font-size:12px; color:#999; line-height:20px;}
+.down{ font-size:12px; color:#999; text-decoration:none; cursor:pointer;}
+.down:hover{ color:#f60; text-decoration:underline;}
+
+.dashang{ cursor:pointer;}
+.dashang:hover{ color:#f60; font-weight:bold;}
+.myewm{position:absolute; left:0; top:0; width:100%; height:255px; padding-top:10px; text-align:center;background:#fff; font-size:12px; font-family:"微软雅黑"; display:none; z-index:9;}
+
+.pay_tab{ height:24px; line-height:24px;}
+.pay_tab li{ color:#666; float:left; width:50%; text-align:center; border-bottom:#eee solid 1px; cursor:pointer;}
+.pay_tab li.active{ color:#f60; border-bottom:#f60 solid 1px;}
+.pay_list li{ display:none; padding-top:10px;}
+.pay_list li img{ margin-top:30px;}
+.pay_list p{ line-height:16px; text-align:left; padding:2px 10px 3px; font-family:"微软雅黑"; color:#666;}
+.pay_list dfn{ display:inline-block; width:20px; text-align:center; margin-right:5px;}
+.pay_list b{ display:inline-block; width:50px; margin-right:10px; text-align:right; font-weight:normal; font-size:12px;}
+.pay_list span{ margin-left:3px;}
+.pay_list li .pay_hot{ color:#F00;}
+
+
+</style>
+</head>
+
+<body>
+<dl class="nav">
+	<dd id="goekp">查工时</dd>
+    <dd id="huiyi">订会议室</dd>
+    <dd id="daka">补打卡</dd>
+    <dd id="qingjia">请假单</dd>
+    <dd id="jiaban">加班单</dd>
+    <dd id="gongzi">工资条</dd>
+    <dd id="mytime">工时年假日历</dd>
+    <dd id="liucheng">EKP流程管理</dd>
+    
+</dl>
+<div class="myewm" id="myewm">
+	<ul class="pay_tab" id="pay_tab">
+    	<li class="active">支付宝扫码</li>
+        <li>打赏榜</li>
+    </ul>
+    <ul class="pay_list" id="pay_list">
+    	<li style="display:block;"><img src="http://www.baoqianduan.com/demo/joyutimephp/zhifu.png"></li>
+        <li id="paylist">
+        	
+        </li>
+    </ul>
+</div>
+<p class="footer"><b class="fr dashang c_f60" id="dashang" title="点击打赏">打赏</b>开发者：杨安云</p>
+<p class="footer">当前版本：<span id="oldbb">16.3.26</span></p>
+<p class="footer"><a class="down fr c_f60" id="guanwang" title="插件官方网站">官网</a>最新版本：<a class="down" id="newbb" title="点击下载新版"></a></p>
+
+
+<script src="jquery1.7.js"></script>
+<script src="popup.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.warning {
+	font-weight: bold;
+}
+
+.urgent {
+	font-style: italic;
+	font-size: 20px;
+}
+
+.warning.urgent {
+	background-color: rgb(144, 202, 232);
+	font-size: 200%;
+}
+
+#warning {
+	font-weight: normal;
+}
+
+h1 > em {
+	color: red;
+}
+
+h1 + p {
+	color: green;
+}

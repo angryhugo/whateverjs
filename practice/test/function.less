@@ -1,0 +1,72 @@
+.yh() {
+    font-family: "Microsoft Yahei", sans-serif;
+}
+
+.simsun() {
+    font-family: "SimSun", sans-serif;
+}
+
+.arial() {
+    font-family: Arial, sans-serif;
+}
+
+.font(@size, @color) {
+    font-size: @size;
+    color: @color;
+}
+
+.font(@size, @color, @lineHeight) {
+    font-size: @size;
+    color: @color;
+    line-height: @lineHeight;
+}
+
+.f60(){
+    color: #f60;
+}
+
+.wh(@wh) {
+    width: @wh;
+    height: @wh;
+}
+
+.wh(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.tof(){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tran(@proper:all, @dur: 0.3s, @fun: linear, @delay: 0s) {
+    -webkit-transition: @proper @dur @fun @delay;
+    transition: @proper @dur @fun @delay;
+}
+
+.scale(@s: 1.1){
+    -webkit-transform: scale(@s);
+    transform: scale(@s);
+}
+
+.translate(@x: 0, @y: 0) {
+    -webkit-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}
+
+.rotate(@angle: 10deg){
+    -webkit-transform: rotate(@angle);
+    transform: rotate(@angle);
+}
+
+.animationName(@name) {
+    -webkit-animation-name: @name;
+    animation-name: @name;
+}
+
+.animation() {
+    -webkit-animation: 1.5s linear 0s normal none infinite;
+    animation: 1.5s linear 0s normal none infinite;
+}
